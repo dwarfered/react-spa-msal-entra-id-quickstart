@@ -1,4 +1,4 @@
-# MSAL with Next.js & Microsoft Graph Quickstart Example
+# MSAL Next.js Microsoft Graph API Quickstart
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
