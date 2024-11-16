@@ -1,4 +1,4 @@
-# MSAL Next.js Microsoft Graph API Quickstart
+# MSAL Next.js Microsoft Graph SPA Quickstart
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
