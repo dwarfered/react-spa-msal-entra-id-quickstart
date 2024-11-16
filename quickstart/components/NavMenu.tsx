@@ -8,14 +8,22 @@ import {
   Body1Strong,
   Button,
   Divider,
+  tokens,
   Toolbar,
   ToolbarGroup,
 } from "@fluentui/react-components";
 import { AppsListRegular, HomeRegular } from "@fluentui/react-icons";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function NavMenu() {
   const router = useRouter();
+
+  const pathname = usePathname(); // Get the current route
+
+  const activeStyle = {
+    backgroundColor: tokens.colorNeutralBackground2,
+  };
+
 
   return (
     <Toolbar aria-label="with Separeted Groups">
@@ -30,7 +38,8 @@ export default function NavMenu() {
           style={{
             width: "100%",
             justifyContent: "flex-start", // This aligns the button content to the left
-            display: "flex", // Ensures flexbox layout for content alignment
+            display: "flex", // Ensures flexbox layout for content alignment,
+            ...(pathname === "/" ? activeStyle : {}),
           }}
         >
           <Body1Strong> Home</Body1Strong>
@@ -48,15 +57,14 @@ export default function NavMenu() {
               </AccordionHeader>
               <AccordionPanel>
                 <Button
-                  onClick={() => {
-                    router.push("/profile");
-                  }}
+                  onClick={() => router.push("/profile")}
                   shape="square"
                   appearance="subtle"
                   style={{
                     width: "100%",
                     justifyContent: "flex-start",
                     display: "flex",
+                    ...(pathname === "/profile" ? activeStyle : {}),
                   }}
                 >
                   <Body1>My profile</Body1>
