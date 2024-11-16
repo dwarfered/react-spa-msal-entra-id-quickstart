@@ -1,4 +1,4 @@
-# Microsoft Authentication (MSAL) with Nextjs and Microsoft Graph.
+# MSAL Next.js Microsoft Graph SPA Quickstart
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
@@ -53,7 +53,7 @@ npm run build
 ## Screenshots
 
 ### Pending Sign In
-<img src="images/image1.png" width="300">
+<img src="images/image1.png" width="600">
 
 ### Sign In
-<img src="images/image2.png" width="300">
+<img src="images/image2.png" width="600">
