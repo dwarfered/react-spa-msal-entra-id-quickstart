@@ -4,7 +4,7 @@ export const PATHS = {
   };
   
   // Common strings or names
-  export const APP_NAME = "ms-identity-nextjs-spa-quickstart";
+  export const APP_NAME = "msal-nextjs-spa-example";
   export const COPYRIGHT = "© 2024 My Company";
   
   // Other global configurations
