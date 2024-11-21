@@ -12,7 +12,11 @@ import {
   Toolbar,
   ToolbarGroup,
 } from "@fluentui/react-components";
-import { AppsListRegular, HomeRegular } from "@fluentui/react-icons";
+import {
+  AppsListRegular,
+  DividerTallFilled,
+  HomeRegular,
+} from "@fluentui/react-icons";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function NavMenu() {
@@ -22,8 +26,8 @@ export default function NavMenu() {
 
   const activeStyle = {
     backgroundColor: tokens.colorNeutralBackground2,
+    color: tokens.colorNeutralForeground2BrandSelected,
   };
-
 
   return (
     <Toolbar aria-label="with Separeted Groups">
@@ -57,6 +61,15 @@ export default function NavMenu() {
               </AccordionHeader>
               <AccordionPanel>
                 <Button
+                  icon={
+                    pathname === "/profile" ? (
+                      <DividerTallFilled
+                        style={{
+                          transform: "scaleX(2)",
+                        }}
+                      />
+                    ) : undefined
+                  }
                   onClick={() => router.push("/profile")}
                   shape="square"
                   appearance="subtle"
