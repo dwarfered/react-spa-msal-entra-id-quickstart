@@ -1,4 +1,4 @@
-# MSAL Next.js Microsoft Graph Example
+# MSAL Next.js Example
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
