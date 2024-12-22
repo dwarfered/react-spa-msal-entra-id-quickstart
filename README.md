@@ -1,13 +1,10 @@
-# MSAL Next.js Microsoft Graph SPA Quickstart
+# MSAL Next.js Microsoft Graph Example
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-An example showcasing the core principles of modern authentication using the Microsoft Identity Platform in Next.js version 14, utilizing MSAL React for client-side requests to Microsoft Graph.
-
-The [Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/v2-overview), incorporating [Entra ID](https://learn.microsoft.com/en-au/entra/fundamentals/whatis) (Azure AD) and [Azure Azure Active Directory B2C](https://docs.microsoft.com/azure/active-directory-b2c/overview) (Azure AD B2C) plays a pivotal role in the Azure cloud ecosystem.
-This example is designed to showcase the basics of modern authentication within a Nextjs framework, utilising the [Microsoft Authentication Library for React](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react) (MSAL React).
+This example illustrates the core principles of modern authentication with Microsoft Entra, utilizing the Next.js framework and MSAL React for seamless client-side integration with Microsoft Graph.
 
 ## Sample Prerequisites
 
