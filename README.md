@@ -1,4 +1,4 @@
-# MSAL Next.js Example
+# MSAL.js for Next.js Quickstart
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
