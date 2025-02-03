@@ -4,7 +4,7 @@
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-This example illustrates the core principles of modern authentication with Microsoft Entra, utilizing the Next.js framework and MSAL React for seamless client-side integration with Microsoft Graph.
+This example highlights how to use Microsoft Entra for modern authentication with Next.js and MSAL React, enabling seamless client-side integration with Microsoft Graph.
 
 ## Sample Prerequisites
 
