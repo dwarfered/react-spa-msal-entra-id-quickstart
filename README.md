@@ -1,4 +1,4 @@
-# MSAL.js for Next.js Quickstart
+# React single-page application using MSAL React to authenticate users against Microsoft Entra ID
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
