@@ -6,6 +6,12 @@
 
 This example highlights how to use Microsoft Entra for modern authentication with Next.js and MSAL React, enabling seamless client-side integration with Microsoft Graph.
 
+## ⭐ Like this project?  
+
+If you find this repository useful, please **give it a star**!  
+
+[![GitHub stars](https://img.shields.io/github/stars/dwarfered/react-spa-msal-entra-id-quickstart.svg?style=social)](https://github.com/dwarfered/react-spa-msal-entra-id-quickstart/stargazers)
+
 ## Sample Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
