@@ -7,8 +7,8 @@ import {
 
 export const msalConfig: Configuration = {
   auth: {
-    clientId: "87f8596c-887d-4280-88f0-821ec093d04e", // your App Registration Id (clientId)
-    authority: "https://login.microsoftonline.com/common", // common (for multi-tenant app) or your tenantId
+    clientId: "87f8596c-887d-4280-88f0-821ec093d04e", // your Entra ID App Registration ID (clientId)
+    authority: "https://login.microsoftonline.com/common", // set common (for multi-tenant app) or your tenantId
     redirectUri: "/",
     postLogoutRedirectUri: "/",
   },
