@@ -1,99 +1,47 @@
-"use client";
-
-import Image from "next/image";
 import styles from "./page.module.css";
-import { Button } from "@fluentui/react-components";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Microsoft Entra SPA Demo",
+  description:
+    "A React SPA using MSAL and Microsoft Entra ID to authenticate users and access Microsoft Graph.",
+  keywords: [
+    "Microsoft Entra",
+    "MSAL",
+    "Next.js",
+    "React",
+    "Microsoft Graph",
+    "SPA",
+    "authentication",
+  ],
+  openGraph: {
+    title: "Microsoft Entra SPA Demo",
+    description:
+      "Authenticate users with MSAL and Entra ID. Access Graph API securely in this React SPA.",
+    // url: "https://yourdomain.com", // Replace with your deployed site
+    // images: [
+    //   {
+    //     url: "https://yourdomain.com/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Microsoft Entra SPA Demo",
+    //   },
+    // ],
+  },
+};
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Button appearance="primary">Get started</Button>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <h1>Welcome to the Microsoft Entra SPA Demo</h1>
+        <p>
+          This is a statically exported React app using MSAL.js to authenticate
+          users with Microsoft Entra ID and call Microsoft Graph.
+        </p>
+        <Link href="/dashboard">Go to Dashboard</Link>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }
