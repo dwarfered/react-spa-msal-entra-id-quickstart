@@ -4,7 +4,7 @@
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-This example highlights how to use Microsoft Entra for modern authentication with Next.js and MSAL React, enabling seamless client-side integration with Microsoft Graph.
+A quickstart React single-page application that uses MSAL React to authenticate users with Microsoft Entra ID and make authorized requests to Microsoft Graph.
 
 ## ⭐ Like this project?  
 
