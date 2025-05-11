@@ -6,6 +6,12 @@
 
 A quickstart React single-page application that uses MSAL React to authenticate users with Microsoft Entra ID and make authorized requests to Microsoft Graph.
 
+🔄 Project Update in Progress (11th May 2025)
+
+Note: An update is currently in progress to support the latest versions of Next.js and MSAL React.
+This will include improved compatibility with Next.js 15+, enhanced authentication flows, and updated integration patterns with Microsoft Entra ID.
+Stay tuned — will publish the updated version soon!
+
 ## ⭐ Like this project?  
 
 If you find this repository useful, please **give it a star**!  
