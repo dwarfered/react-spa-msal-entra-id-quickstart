@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/msal-react": "^3.0.12",
     "@fluentui/react-components": "^9.63.0",
     "next": "15.3.2",
     "react": "^18.3.1",

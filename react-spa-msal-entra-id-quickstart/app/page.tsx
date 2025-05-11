@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "Microsoft Entra SPA Demo",
     description:
-      "Authenticate users with MSAL and Entra ID. Access Graph API securely in this React SPA.",
+      "Authenticate users with MSAL and Entra ID. Access the Microsoft Graph API securely in this React SPA.",
     // url: "https://yourdomain.com", // Replace with your deployed site
     // images: [
     //   {
