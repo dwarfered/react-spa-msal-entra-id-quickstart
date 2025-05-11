@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Button } from "@fluentui/react-components";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Button appearance="primary">Get started</Button>
       <main className={styles.main}>
         <Image
           className={styles.logo}
