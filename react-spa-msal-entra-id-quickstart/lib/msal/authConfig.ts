@@ -5,14 +5,15 @@ import {
   PublicClientApplication,
 } from "@azure/msal-browser";
 
-export const msalConfig: Configuration = {
+export const authConfig: Configuration = {
   auth: {
     clientId: "87f8596c-887d-4280-88f0-821ec093d04e", // your Entra ID App Registration ID (clientId)
-    authority: "https://login.microsoftonline.com/common", // set common (for multi-tenant app) or your tenantId
+    authority: "https://login.microsoftonline.com/common", // set 'common' (for multi-tenant app) or your tenantId
     redirectUri: "/",
     postLogoutRedirectUri: "/",
   },
   system: {
+    allowPlatformBroker: false, // Disables WAM Broker
     loggerOptions: {
       loggerCallback: (level, message, containsPii) => {
         if (containsPii) {
@@ -54,4 +55,4 @@ export const graphConfig = {
     "https://graph.microsoft.com/v1.0/me/photos/48x48/$value",
 };
 
-export const msalInstance = new PublicClientApplication(msalConfig);
+export const msalInstance = new PublicClientApplication(authConfig);
