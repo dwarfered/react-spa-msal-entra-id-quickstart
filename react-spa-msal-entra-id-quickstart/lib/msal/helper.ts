@@ -1,5 +1,6 @@
 import { AccountInfo, AuthenticationResult, InteractionRequiredAuthError } from "@azure/msal-browser";
-import { loginRequest, msalInstance } from "./authConfig";
+import { loginRequest } from "./authConfig";
+import { msalInstance } from "./instance";
 
 export async function acquireGraphAccessToken() {
   const account = msalInstance.getActiveAccount();
@@ -27,13 +28,13 @@ export async function acquireGraphAccessToken() {
 }
 
 export function handleSignIn() {
-  msalInstance.loginRedirect(loginRequest).catch((e) => {
+  msalInstance.loginRedirect(loginRequest).catch((e: unknown) => {
     console.error(`loginRedirect failed: ${e}`);
   });
 }
 
 export function handleSignOut() {
-  msalInstance.logoutRedirect(loginRequest).catch((e) => {
+  msalInstance.logoutRedirect(loginRequest).catch((e: unknown) => {
     console.error(`loginRedirect failed: ${e}`);
   });
 }

@@ -2,7 +2,6 @@ import {
   Configuration,
   LogLevel,
   PopupRequest,
-  PublicClientApplication,
 } from "@azure/msal-browser";
 
 export const authConfig: Configuration = {
@@ -54,5 +53,3 @@ export const graphConfig = {
   graphMePhotoEndpoint:
     "https://graph.microsoft.com/v1.0/me/photos/48x48/$value",
 };
-
-export const msalInstance = new PublicClientApplication(authConfig);

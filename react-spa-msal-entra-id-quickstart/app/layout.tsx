@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ClientFluentProvider from "@/components/providers/ClientFluentProvider";
+import ClientFluentProvider from "@/components/providers/FluentClientProvider";
+import MsalClientWrapper from "@/components/providers/MsalClientProvider";
+import { MsalCustomClientProvider } from "@/components/providers/MsalCustomClientProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ClientFluentProvider>{children}</ClientFluentProvider>
+        <ClientFluentProvider>
+          <MsalClientWrapper>
+            <MsalCustomClientProvider>{children}</MsalCustomClientProvider>
+          </MsalClientWrapper>
+        </ClientFluentProvider>
       </body>
     </html>
   );

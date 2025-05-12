@@ -1,6 +1,6 @@
 import { InteractionRequiredAuthError } from "@azure/msal-browser";
 import { acquireGraphAccessToken, handleSignIn } from "../msal/helper";
-import { msalInstance } from "../msal/authConfig";
+import { msalInstance } from "../msal/instance";
 
 export interface ODataResponse<T> {
   "@odata.context": string;
