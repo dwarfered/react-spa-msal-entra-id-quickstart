@@ -4,10 +4,17 @@
 // import { useMsal } from "@azure/msal-react";
 // import { PublicClientApplication } from "@azure/msal-browser";
 
-	// •	Automatically log in unauthenticated users
-	// •	Restrict access to authenticated users only
-	// •	Centralize token handling logic
-export const MsalCustomClientProvider = ({ children }: { children: React.ReactNode }) => {
+/*
+ •	Automatically log in unauthenticated users
+ •	Restrict access to authenticated users only
+ •	Centralise token handling logic
+*/
+
+export const MsalCustomClientProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   // const { instance, accounts } = useMsal();
   // const [isInitialized, setIsInitialized] = useState(false);
 
