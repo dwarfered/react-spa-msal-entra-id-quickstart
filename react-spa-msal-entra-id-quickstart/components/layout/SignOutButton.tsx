@@ -1,4 +1,4 @@
-import { graphConfig } from "@/lib/msal/authConfig";
+import { graphConfig } from "@/lib/msal/config";
 import { handleSignOut } from "@/lib/msal/helper";
 import { msalInstance } from "@/lib/msal/instance";
 import { fetcher } from "@/lib/msgraph/fetcher";

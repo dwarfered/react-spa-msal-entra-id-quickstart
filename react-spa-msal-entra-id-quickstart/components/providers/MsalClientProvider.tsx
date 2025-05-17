@@ -3,7 +3,7 @@
 import { ReactNode, useEffect } from "react";
 import { MsalProvider } from "@azure/msal-react";
 import { msalInstance } from "@/lib/msal/instance";
-import { loginRequest } from "@/lib/msal/authConfig";
+import { loginRequest } from "@/lib/msal/config";
 
 export default function MsalClientProvider({ children }: { children: ReactNode }) {
   useEffect(() => {

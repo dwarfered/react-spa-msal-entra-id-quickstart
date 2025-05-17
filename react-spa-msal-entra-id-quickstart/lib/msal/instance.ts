@@ -1,5 +1,5 @@
 import { PublicClientApplication } from "@azure/msal-browser";
-import { authConfig } from "./authConfig";
+import { authConfig } from "./config";
 
 const globalForMsal = globalThis as typeof globalThis & {
   __msalInstance?: PublicClientApplication;

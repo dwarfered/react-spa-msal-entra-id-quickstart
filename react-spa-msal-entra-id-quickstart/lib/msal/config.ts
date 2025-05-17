@@ -1,4 +1,4 @@
-import { Configuration, LogLevel, PopupRequest } from "@azure/msal-browser";
+import { Configuration, LogLevel, RedirectRequest } from "@azure/msal-browser";
 
 export const authConfig: Configuration = {
   auth: {
@@ -49,7 +49,7 @@ export const authConfig: Configuration = {
   },
 };
 
-export const loginRequest: PopupRequest = {
+export const loginRequest: RedirectRequest = {
   scopes: ["User.Read"],
 };
 

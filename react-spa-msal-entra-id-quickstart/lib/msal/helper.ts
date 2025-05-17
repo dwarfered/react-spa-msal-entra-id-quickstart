@@ -1,5 +1,5 @@
 import { AccountInfo, AuthenticationResult, InteractionRequiredAuthError } from "@azure/msal-browser";
-import { loginRequest } from "./authConfig";
+import { loginRequest } from "./config";
 import { msalInstance } from "./instance";
 
 export async function acquireGraphAccessToken(): Promise<string> {
