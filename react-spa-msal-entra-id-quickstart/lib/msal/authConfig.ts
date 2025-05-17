@@ -1,8 +1,4 @@
-import {
-  Configuration,
-  LogLevel,
-  PopupRequest,
-} from "@azure/msal-browser";
+import { Configuration, LogLevel, PopupRequest } from "@azure/msal-browser";
 
 export const authConfig: Configuration = {
   auth: {
@@ -29,6 +25,15 @@ export const authConfig: Configuration = {
             console.debug(message);
             return;
           case LogLevel.Warning:
+            // Suppress "already an instance" warning in development
+            if (
+              process.env.NODE_ENV === "development" &&
+              message.includes(
+                "There is already an instance of MSAL.js in the window with the same client id"
+              )
+            ) {
+              return;
+            }
             console.warn(message);
             return;
           default:

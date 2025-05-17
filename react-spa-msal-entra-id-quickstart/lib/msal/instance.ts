@@ -1,13 +1,20 @@
 import { PublicClientApplication } from "@azure/msal-browser";
 import { authConfig } from "./authConfig";
 
-const globalWithMsal = globalThis as typeof globalThis & {
+const globalForMsal = globalThis as typeof globalThis & {
   __msalInstance?: PublicClientApplication;
 };
 
-const msalInstance =
-  globalWithMsal.__msalInstance ?? new PublicClientApplication(authConfig);
+if (!globalForMsal.__msalInstance) {
+  if (process.env.NODE_ENV === "development") {
+    console.log("[MSAL] Creating new PublicClientApplication instance");
+  }
 
-globalWithMsal.__msalInstance = msalInstance;
+  globalForMsal.__msalInstance = new PublicClientApplication(authConfig);
+} else {
+  if (process.env.NODE_ENV === "development") {
+    console.log("[MSAL] Reusing existing PublicClientApplication instance");
+  }
+}
 
-export { msalInstance };
+export const msalInstance = globalForMsal.__msalInstance;

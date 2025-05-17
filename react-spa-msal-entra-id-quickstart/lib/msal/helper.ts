@@ -15,7 +15,7 @@ export async function acquireGraphAccessToken(): Promise<string> {
       account,
     });
     return response.accessToken;
-  } catch (error: any) {
+  } catch (error: unknown) {
     if (error instanceof InteractionRequiredAuthError) {
       console.warn("Token interaction required. Redirecting to sign in.");
       // msalInstance.clearCache(); // optional — be cautious with this
