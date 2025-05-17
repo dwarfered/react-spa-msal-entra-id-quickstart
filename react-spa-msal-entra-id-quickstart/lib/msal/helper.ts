@@ -2,26 +2,26 @@ import { AccountInfo, AuthenticationResult, InteractionRequiredAuthError } from 
 import { loginRequest } from "./authConfig";
 import { msalInstance } from "./instance";
 
-export async function acquireGraphAccessToken() {
+export async function acquireGraphAccessToken(): Promise<string> {
   const account = msalInstance.getActiveAccount();
   if (!account) {
-    throw Error(
-      "No active account! Verify a user has been signed in and setActiveAccount has been called."
-    );
+    console.warn("No active account found in acquireGraphAccessToken()");
+    throw new Error("No active account! User may not be signed in.");
   }
 
   try {
     const response = await msalInstance.acquireTokenSilent({
       ...loginRequest,
-      account: account,
+      account,
     });
     return response.accessToken;
-  } catch (error) {
-     if (error instanceof InteractionRequiredAuthError) {
-       msalInstance.clearCache();
-       handleSignIn();
+  } catch (error: any) {
+    if (error instanceof InteractionRequiredAuthError) {
+      console.warn("Token interaction required. Redirecting to sign in.");
+      // msalInstance.clearCache(); // optional — be cautious with this
+      handleSignIn();
     } else {
-      console.error('Failed to acquire token silently', error);
+      console.error("Silent token acquisition failed", error);
     }
     throw error;
   }
