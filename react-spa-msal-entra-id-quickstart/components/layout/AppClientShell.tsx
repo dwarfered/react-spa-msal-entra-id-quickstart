@@ -1,14 +1,16 @@
-// components/layout/AppClientShell.tsx
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
+  FluentProvider,
   makeStyles,
   shorthands,
+  webLightTheme,
 } from "@fluentui/react-components";
 import MsalClientProvider from "../providers/MsalClientProvider";
 import NavBar from "./navigation/NavBar";
 import { MsalCustomClientProvider } from "../providers/MsalCustomClientProvider";
+import LoadingOverlay from "./LoadingOverlay";
 
 const useStyles = makeStyles({
   toolbar: {
@@ -41,22 +43,34 @@ const useStyles = makeStyles({
 export default function AppClientShell({ children }: { children: ReactNode }) {
   const styles = useStyles();
 
-  return (
+  const [hydrated, setHydrated] = useState(false);
 
-    <MsalCustomClientProvider>
-          <MsalClientProvider>
-            <MsalCustomClientProvider>    <div className={styles.toolbar}>
-          <NavBar />
-        </div>
-        <div className={styles.mainContainer}>
-          <div className={styles.sidePanel}>
-            {/* <SideBar /> */}
-          </div>
-          <div className={styles.container}>
-            <div className={styles.content}>{children}</div>
-          </div>
-        </div></MsalCustomClientProvider>
-          </MsalClientProvider>
-        </MsalCustomClientProvider>
+  useEffect(() => {
+    setHydrated(true); // wait for client-side hydration
+  }, []);
+
+  if (!hydrated) {
+    return <LoadingOverlay />;
+  }
+
+  return (
+    <FluentProvider theme={webLightTheme}>
+      <MsalCustomClientProvider>
+        <MsalClientProvider>
+          <MsalCustomClientProvider>
+            {" "}
+            <div className={styles.toolbar}>
+              <NavBar />
+            </div>
+            <div className={styles.mainContainer}>
+              <div className={styles.sidePanel}>{/* <SideBar /> */}</div>
+              <div className={styles.container}>
+                <div className={styles.content}>{children}</div>
+              </div>
+            </div>
+          </MsalCustomClientProvider>
+        </MsalClientProvider>
+      </MsalCustomClientProvider>
+    </FluentProvider>
   );
 }
