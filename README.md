@@ -4,13 +4,7 @@
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-A quickstart React single-page application that uses MSAL React to authenticate users with Microsoft Entra ID and make authorized requests to Microsoft Graph.
-
-🔄 Project Update in Progress (11th May 2025)
-
-Note: An update is currently in progress to support the latest versions of Next.js and MSAL React.
-This will include improved compatibility with Next.js 15+, enhanced authentication flows, and updated integration patterns with Microsoft Entra ID.
-Stay tuned — will publish the updated version soon!
+A quickstart React single-page application built with Next.js that uses MSAL React to authenticate users with Microsoft Entra ID via the authorization code flow with Proof Key for Code Exchange (PKCE). It demonstrates how to securely sign in users and call the Microsoft Graph API, using the Microsoft Authentication Library (MSAL) for authentication and Fluent UI for styling.
 
 ## ⭐ Like this project?  
 
@@ -21,7 +15,7 @@ If you find this repository useful, please **give it a star**!
 ## Sample Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
-- [Next.js v14.2.16+](https://nextjs.org/docs/getting-started/installation)
+- [Next.js v15.3.2+](https://nextjs.org/docs/getting-started/installation)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - A modern web browser
 
@@ -33,14 +27,18 @@ If you find this repository useful, please **give it a star**!
 - [Dev Fluent UI](https://react.fluentui.dev/?path=/docs/concepts-introduction--docs) the developer resource.
 - [SWR by Vercel](https://swr.vercel.app) React Hooks for Data Fetching
 > :information_source: "SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data."
-- [jwt.ms](https://jwt.ms) for inspecting your tokens.
-- [SPA developers: Migrate implicit to auth code flow with PKCE](https://devblogs.microsoft.com/identity/migrate-to-auth-code-flow/)
 - Follow the [Entra ID Blog](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/bg-p/Identity) to stay up-to-date with the latest developments.
 
-## Configure the application
+## 📁 Notable Files
 
-- Open ./lib/msalConfig.ts in an editor.
-- Replace Client and Authority for your created Entra Application Registration.
+- `app/layout.tsx` – Root layout that wraps the app
+- `components/AppClientShell.tsx` – The main client-side layout wrapper for the application. It sets up MSAL authentication, Fluent UI theming, and the core layout structure including the navigation bar and sidebar. It also handles client-side hydration with a loading overlay before rendering the app content
+- `lib/msal/config.ts` – MSAL configuration including clientId, authority, and scopes
+- `lib/msal/instance.ts` – Exports a singleton `PublicClientApplication` instance
+- `lib/msal/helper.ts` – Helper functions for sign-in, sign-out, and token acquisition
+- `lib/msgraph/endpoints.ts` - The Microsoft Graph API endpoints that may be called
+- `lib/msgraph/fetcher.ts` - A typed fetcher function that performs authenticated GET requests to Microsoft Graph. It attaches a bearer token, handles response types (JSON, blob, image), and supports automatic pagination for OData @odata.nextLink responses.
+- `lib/msgraph/helper.ts` -  Retrieves a Microsoft Graph access token using silent authentication with fallback to redirect if user interaction is required. Automatically sets the active account if one is not already set.
 
 ## Installing dependencies
 ```bash
