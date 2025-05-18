@@ -1,16 +1,37 @@
-# React single-page application using MSAL React to authenticate users against Microsoft Entra ID
+# React SPA with MSAL for Microsoft Entra ID Authentication
+
+This quickstart demonstrates how to authenticate users in a React single-page application (SPA) using the Microsoft Authentication Library (msal-react) with Microsoft Entra ID, and how to access data securely via the Microsoft Graph API.
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-A quickstart React single-page application built with Next.js that uses MSAL React to authenticate users with Microsoft Entra ID via the authorization code flow with Proof Key for Code Exchange (PKCE). It demonstrates how to securely sign in users and call the Microsoft Graph API, using the Microsoft Authentication Library (MSAL) for authentication and Fluent UI for styling.
+![Next.js](https://img.shields.io/badge/Next.js-15-blue)
+![MSAL](https://img.shields.io/badge/Uses-MSAL--React-brightgreen)
+![Authentication Flow](https://img.shields.io/badge/Auth-Code%20Flow%20with%20PKCE-blueviolet)
+![Microsoft Graph](https://img.shields.io/badge/API-Microsoft%20Graph-blue)
+![UI](https://img.shields.io/badge/UI-Fluent%20UI-ff69b4)
+
+
 
 ## ⭐ Like this project?  
 
 If you find this repository useful, please **give it a star**!  
 
 [![GitHub stars](https://img.shields.io/github/stars/dwarfered/react-spa-msal-entra-id-quickstart.svg?style=social)](https://github.com/dwarfered/react-spa-msal-entra-id-quickstart/stargazers)
+
+## ⚙️ Tech Stack
+
+| Category       | Technology                       |
+|----------------|----------------------------------|
+| Framework      | [Next.js 15](https://nextjs.org/docs) |
+| Language       | TypeScript                       |
+| Authentication | [MSAL React](https://github.com/AzureAD/microsoft-authentication-library-for-js) |
+| Identity       | Microsoft Entra ID               |
+| API            | Microsoft Graph API              |
+| UI Framework   | [Fluent UI](https://react.fluentui.dev/?path=/docs/concepts-introduction--docs) |
+| Auth Flow      | Authorization Code Flow with PKCE |
+| Data Retrieval | [SWR](https://swr.vercel.app)|
 
 ## Sample Prerequisites
 
@@ -21,12 +42,6 @@ If you find this repository useful, please **give it a star**!
 
 ## Recommendations
 
-- [Next.js by Vercel](https://nextjs.org/docs) framework documentation.
-- [Microsoft Authentication Library (MSAL) for JS](https://github.com/AzureAD/microsoft-authentication-library-for-js)
-- [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/) The official front-end framework for building experiences that fit seamlessly into Microsoft 365.
-- [Dev Fluent UI](https://react.fluentui.dev/?path=/docs/concepts-introduction--docs) the developer resource.
-- [SWR by Vercel](https://swr.vercel.app) React Hooks for Data Fetching
-> :information_source: "SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data."
 - Follow the [Entra ID Blog](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/bg-p/Identity) to stay up-to-date with the latest developments.
 
 ## 📁 Notable Files
