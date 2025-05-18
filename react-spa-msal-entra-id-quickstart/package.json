@@ -1,0 +1,30 @@
+{
+  "name": "react-spa-msal-entra-id-quickstart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.12.0",
+    "@azure/msal-react": "^3.0.12",
+    "@fluentui/react-components": "^9.64.0",
+    "@fluentui/react-icons": "^2.0.300",
+    "next": "15.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "swr": "^2.3.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.3.7",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "typescript": "^5"
+  }
+}

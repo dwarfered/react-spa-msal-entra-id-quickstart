@@ -57,12 +57,5 @@ npm run build
 ```
 
 1. Open http://localhost:3000 to view in your browser.
-2. Open http://localhost:3000/profile to view a protected route, that if signed in will display profile information.
+2. Open http://localhost:3000/profile/me to view a protected route, that if signed in will display profile information.
 
-## Screenshots
-
-### Pending Sign In
-<img src="images/image1.png" width="600">
-
-### Sign In
-<img src="images/image2.png" width="600">
