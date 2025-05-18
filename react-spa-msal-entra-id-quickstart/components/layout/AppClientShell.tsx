@@ -8,8 +8,9 @@ import {
   webLightTheme,
 } from "@fluentui/react-components";
 import MsalClientProvider from "../providers/MsalClientProvider";
-import NavBar from "./navigation/NavBar";
 import LoadingOverlay from "./loading/LoadingOverlay";
+import SideBar from "./navigation/SideBar";
+import NavBar from "./navigation/NavBar";
 
 const useStyles = makeStyles({
   toolbar: {
@@ -60,7 +61,7 @@ export default function AppClientShell({ children }: { children: ReactNode }) {
           <NavBar />
         </div>
         <div className={styles.mainContainer}>
-          <div className={styles.sidePanel}>{/* <SideBar /> */}</div>
+          <div className={styles.sidePanel}><SideBar /></div>
           <div className={styles.container}>
             <div className={styles.content}>{children}</div>
           </div>
