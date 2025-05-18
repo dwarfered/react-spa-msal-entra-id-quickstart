@@ -1,6 +1,5 @@
-import { InteractionRequiredAuthError } from "@azure/msal-browser";
-import { acquireGraphAccessToken, handleSignIn } from "../msal/helper";
-import { msalInstance } from "../msal/instance";
+import { getMsGraphAccessToken } from "./helper";
+
 
 export interface ODataResponse<T> {
   "@odata.context": string;
@@ -8,46 +7,41 @@ export interface ODataResponse<T> {
 }
 
 export async function fetcher(...args: Parameters<typeof fetch>) {
-  // fake delay
-  // await new Promise(resolve => setTimeout(resolve, 5000));
+  const [resource, init] = args;
 
-  const headers = new Headers();
-  const accessToken = await acquireGraphAccessToken();
-  const bearer = `Bearer ${accessToken}`;
-  headers.append("Authorization", bearer);
-  const options = {
+  const accessToken = await getMsGraphAccessToken();
+
+  const headers = new Headers(init?.headers);
+  headers.set("Authorization", `Bearer ${accessToken}`);
+
+  const options: RequestInit = {
+    ...init,
     method: "GET",
-    headers: headers,
+    headers,
   };
-  args.push(options);
 
-  const response = await fetch(...args).catch((error) => {
-    if (error instanceof InteractionRequiredAuthError) {
-      msalInstance.clearCache();
-      handleSignIn();
-    }
-  });
+  const response = await fetch(resource, options);
 
-  if (!response) {
-    throw new Error("No response from fetch");
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(`Graph API Error: ${response.status} - ${message}`);
   }
 
   const contentType = response.headers.get("Content-Type");
 
   if (contentType?.includes("application/json")) {
     const data = await response.json();
-    // Handle @odata.nextLink for pagination (assuming you want every result)
-    if (
-      data["@odata.nextLink"] &&
-      typeof data["@odata.nextLink"] === "string"
-    ) {
+
+    // Handle OData pagination
+    if (data["@odata.nextLink"] && typeof data["@odata.nextLink"] === "string") {
       const nextPageData = await fetcher(data["@odata.nextLink"]);
       data.value = [...(data.value || []), ...(nextPageData.value || [])];
     }
+
     return data;
   } else if (contentType?.includes("blob") || contentType?.includes("image")) {
     return response.blob();
-  } else {
-    throw new Error(`Unsupported content type: ${contentType}`);
   }
+
+  throw new Error(`Unsupported content type: ${contentType}`);
 }

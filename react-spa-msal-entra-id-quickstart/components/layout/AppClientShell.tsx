@@ -9,7 +9,7 @@ import {
 } from "@fluentui/react-components";
 import MsalClientProvider from "../providers/MsalClientProvider";
 import NavBar from "./navigation/NavBar";
-import LoadingOverlay from "./LoadingOverlay";
+import LoadingOverlay from "./loading/LoadingOverlay";
 
 const useStyles = makeStyles({
   toolbar: {

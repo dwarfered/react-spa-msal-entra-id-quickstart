@@ -12,9 +12,9 @@ import {
   DrawerProps,
 } from "@fluentui/react-components";
 import { APP_NAME } from "@/lib/constants/app";
-import SignInButton from "../SignInButton";
+import SignInButton from "../login/SignInButton";
 import { useGlobalStyles } from "@/lib/fluent/helper";
-import SignOutButton from "../SignOutButton";
+import SignOutButton from "../login/SignOutButton";
 import { NavOverlay } from "./NavOverlay";
 
 const useStyles = makeStyles({
