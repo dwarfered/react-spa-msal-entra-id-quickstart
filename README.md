@@ -57,3 +57,9 @@ npm run build
 1. Open http://localhost:3000 to view in your browser.
 2. Open http://localhost:3000/profile/me to view a protected route, that if signed in will display profile information.
 
+<p align="center">
+  <img src="images/image1.png" width="600">
+</p>
+<p align="center">
+  <img src="images/image2.png" width="600">
+</p>
