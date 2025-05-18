@@ -1,6 +1,6 @@
 import BuildInfo from "@/components/BuildInfo";
+import AuthDebugInfo from "@/components/AuthDebugInfo";
 import styles from "./page.module.css";
-import Link from "next/link";
 import { APP_NAME } from "@/lib/constants/app";
 
 export const metadata = {
@@ -38,11 +38,11 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Welcome to {APP_NAME}</h1>
         <BuildInfo />
+        <AuthDebugInfo />
         <p>
           This is a statically exported React app using MSAL.js to authenticate
           users with Microsoft Entra ID and call Microsoft Graph.
         </p>
-        <Link href="/dashboard">Go to Dashboard</Link>
       </main>
       <footer className={styles.footer}></footer>
     </div>

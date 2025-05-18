@@ -1,7 +1,7 @@
 import { ProfileData } from "@/components/profile/ProfileData";
 
 export const metadata = {
-  title: "Microsoft Entra ID SPA Demo - Me",
+  title: "Microsoft Entra ID SPA Demo - My Profile",
   description:
     "A React SPA using MSAL and Microsoft Entra ID to authenticate users and access Microsoft Graph.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata = {
     "authentication",
   ],
   openGraph: {
-    title: "Microsoft Entra ID SPA Demo - Me",
+    title: "Microsoft Entra ID SPA Demo - My Profile",
     description:
       "Authenticate users with MSAL and Entra ID. Access the Microsoft Graph API securely in this React SPA.",
     // url: "https://yourdomain.com", // Replace with your deployed site
