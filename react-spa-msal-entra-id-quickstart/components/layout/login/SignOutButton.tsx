@@ -1,6 +1,6 @@
-import { graphConfig } from "@/lib/msal/config";
 import { handleSignOut } from "@/lib/msal/helper";
 import { msalInstance } from "@/lib/msal/instance";
+import { msGraphEndPoints } from "@/lib/msgraph/endpoints";
 import { fetcher } from "@/lib/msgraph/fetcher";
 import {
   Avatar,
@@ -52,7 +52,7 @@ export default function SignOutButton() {
   const account = msalInstance.getActiveAccount();
 
   const { data, error, isLoading } = useSWR<Blob>(
-    graphConfig.graphMePhotoEndpoint,
+    msGraphEndPoints.graphMePhoto,
     fetcher,
     {
       revalidateOnFocus: false,
@@ -86,21 +86,21 @@ export default function SignOutButton() {
             appearance="primary"
             style={{ minWidth: 0 }}
           >
-              <div
-                className={styles.textContainer}
-                style={{ flex: 1, overflow: "hidden" }}
-              >
-                <div className={styles.text} style={{ overflow: "hidden" }}>
-                  {account?.username}
-                </div>
-                <div className={styles.text} style={{ overflow: "hidden" }}>
-                  {account?.name}
-                </div>
+            <div
+              className={styles.textContainer}
+              style={{ flex: 1, overflow: "hidden" }}
+            >
+              <div className={styles.text} style={{ overflow: "hidden" }}>
+                {account?.username}
               </div>
-              <Avatar
-                name={account?.name}
-                image={imageSrc ? { src: imageSrc } : undefined}
-              />
+              <div className={styles.text} style={{ overflow: "hidden" }}>
+                {account?.name}
+              </div>
+            </div>
+            <Avatar
+              name={account?.name}
+              image={imageSrc ? { src: imageSrc } : undefined}
+            />
           </Button>
         </MenuTrigger>
         <MenuPopover>

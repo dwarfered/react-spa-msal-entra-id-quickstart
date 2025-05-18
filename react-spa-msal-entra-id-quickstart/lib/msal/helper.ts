@@ -1,4 +1,4 @@
-import { AccountInfo, AuthenticationResult, InteractionRequiredAuthError } from "@azure/msal-browser";
+import { AccountInfo, AuthenticationResult } from "@azure/msal-browser";
 import { loginRequest } from "./config";
 import { msalInstance } from "./instance";
 

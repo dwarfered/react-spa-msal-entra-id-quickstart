@@ -8,7 +8,7 @@ import {
   Divider,
   Body1Strong,
 } from "@fluentui/react-components";
-import { navConfig } from "./NavConfig";
+import { navConfig } from "./config";
 import { NavButton } from "./NavButton";
 
 

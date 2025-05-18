@@ -1,10 +1,7 @@
-import BuildInfo from "@/components/BuildInfo";
-import styles from "./page.module.css";
-import Link from "next/link";
-import { APP_NAME } from "@/lib/constants/app";
+import { ProfileData } from "@/components/profile/ProfileData";
 
 export const metadata = {
-  title: "Microsoft Entra ID SPA Demo",
+  title: "Microsoft Entra ID SPA Demo - Me",
   description:
     "A React SPA using MSAL and Microsoft Entra ID to authenticate users and access Microsoft Graph.",
   keywords: [
@@ -17,7 +14,7 @@ export const metadata = {
     "authentication",
   ],
   openGraph: {
-    title: "Microsoft Entra ID SPA Demo",
+    title: "Microsoft Entra ID SPA Demo - Me",
     description:
       "Authenticate users with MSAL and Entra ID. Access the Microsoft Graph API securely in this React SPA.",
     // url: "https://yourdomain.com", // Replace with your deployed site
@@ -32,19 +29,8 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1>Welcome to {APP_NAME}</h1>
-        <BuildInfo />
-        <p>
-          This is a statically exported React app using MSAL.js to authenticate
-          users with Microsoft Entra ID and call Microsoft Graph.
-        </p>
-        <Link href="/dashboard">Go to Dashboard</Link>
-      </main>
-      <footer className={styles.footer}></footer>
-    </div>
+      <ProfileData />
   );
 }

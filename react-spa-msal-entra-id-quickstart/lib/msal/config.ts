@@ -52,9 +52,3 @@ export const authConfig: Configuration = {
 export const loginRequest: RedirectRequest = {
   scopes: ["User.Read"],
 };
-
-export const graphConfig = {
-  graphMeEndpoint: "https://graph.microsoft.com/v1.0/me",
-  graphMePhotoEndpoint:
-    "https://graph.microsoft.com/v1.0/me/photos/48x48/$value",
-};
