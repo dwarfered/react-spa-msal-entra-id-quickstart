@@ -1,3 +1,4 @@
+import BuildInfo from "@/components/BuildInfo";
 import styles from "./page.module.css";
 import Link from "next/link";
 
@@ -35,6 +36,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Welcome to the Microsoft Entra SPA Demo</h1>
+        <BuildInfo />
         <p>
           This is a statically exported React app using MSAL.js to authenticate
           users with Microsoft Entra ID and call Microsoft Graph.
