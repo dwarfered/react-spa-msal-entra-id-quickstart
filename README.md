@@ -6,13 +6,11 @@ This quickstart demonstrates how to authenticate users in a React single-page ap
 <img src="images/repository-open-graph-template.png" width="600"/>
 </p>
 
-![Next.js](https://img.shields.io/badge/Next.js-15-blue)
-![MSAL](https://img.shields.io/badge/Uses-MSAL--React-brightgreen)
-![Authentication Flow](https://img.shields.io/badge/Auth-Code%20Flow%20with%20PKCE-blueviolet)
-![Microsoft Graph](https://img.shields.io/badge/API-Microsoft%20Graph-blue)
-![UI](https://img.shields.io/badge/UI-Fluent%20UI-ff69b4)
-
-
+[![Next.js](https://img.shields.io/badge/Next.js-15-blue)](https://github.com/vercel/next.js)
+[![MSAL React](https://img.shields.io/badge/Uses-MSAL--React-brightgreen)](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react)
+[![PKCE Flow](https://img.shields.io/badge/Auth-Code%20Flow%20with%20PKCE-blueviolet)](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+[![Microsoft Graph](https://img.shields.io/badge/API-Microsoft%20Graph-blue)](https://github.com/microsoftgraph/msgraph-sdk-javascript)
+[![Fluent UI](https://img.shields.io/badge/UI-Fluent%20UI-ff69b4)](https://github.com/microsoft/fluentui)
 
 ## ⭐ Like this project?  
 
