@@ -48,7 +48,7 @@ If you find this repository useful, please **give it a star**!
 - `app/layout.tsx` – Root layout that wraps the app
 - `components/AppClientShell.tsx` – The main client-side layout wrapper for the application. It sets up MSAL authentication, Fluent UI theming, and the core layout structure including the navigation bar and sidebar. It also handles client-side hydration with a loading overlay before rendering the app content
 - `lib/msal/config.ts` – Defines the MSAL configuration used for authentication, including `clientId`, `authority`, and scopes.  
-  💡 If you're building your own application, this is where you'd replace the `clientId` with your own App Registration ID from Microsoft Entra ID.
+  💡 If you're building your own application, this is where you'd replace the `clientId` with your own App Registration ID.
 - `lib/msal/instance.ts` – Exports a singleton `PublicClientApplication` instance
 - `lib/msal/helper.ts` – Helper functions for sign-in, sign-out, and token acquisition
 - `lib/msgraph/endpoints.ts` - The Microsoft Graph API endpoints that may be called
