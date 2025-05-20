@@ -1,6 +1,6 @@
 # React SPA with MSAL for Microsoft Entra ID Authentication
 
-This quickstart demonstrates how to authenticate users in a React single-page application (SPA) using the Microsoft Authentication Library (msal-react) with Microsoft Entra ID, and how to access data securely via the Microsoft Graph API.
+This quickstart demonstrates how to authenticate users in a React Single-Page Application (SPA) using the Microsoft Authentication Library (msal-react) with Microsoft Entra ID, and how to access data securely via the Microsoft Graph API.
 
 <p align="center">
 <img src="images/repository-open-graph-template.png" width="600"/>
@@ -12,17 +12,22 @@ This quickstart demonstrates how to authenticate users in a React single-page ap
 [![Microsoft Graph](https://img.shields.io/badge/API-Microsoft%20Graph-blue)](https://github.com/microsoftgraph/msgraph-sdk-javascript)
 [![Fluent UI](https://img.shields.io/badge/UI-Fluent%20UI-ff69b4)](https://github.com/microsoft/fluentui)
 
+
 ## ⭐ Like this project?  
 
 If you find this repository useful, please **give it a star**!  
 
 [![GitHub stars](https://img.shields.io/github/stars/dwarfered/react-spa-msal-entra-id-quickstart.svg?style=social)](https://github.com/dwarfered/react-spa-msal-entra-id-quickstart/stargazers)
 
+<p align="center">
+  <img src="images/image1.png" width="600">
+</p>
+
 ## ⚙️ Tech Stack
 
 | Category       | Technology                       |
 |----------------|----------------------------------|
-| Framework      | [Next.js 15](https://nextjs.org/docs) |
+| Framework      | [Next.js 15.3.2](https://nextjs.org/docs) |
 | Language       | TypeScript                       |
 | Authentication | [MSAL React](https://github.com/AzureAD/microsoft-authentication-library-for-js) |
 | Identity       | Microsoft Entra ID               |
@@ -31,16 +36,12 @@ If you find this repository useful, please **give it a star**!
 | Auth Flow      | Authorization Code Flow with PKCE |
 | Data Retrieval | [SWR](https://swr.vercel.app)|
 
-## Sample Prerequisites
+## Quickstart Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Next.js v15.3.2+](https://nextjs.org/docs/getting-started/installation)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - A modern web browser
-
-## Recommendations
-
-- Follow the [Entra ID Blog](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/bg-p/Identity) to stay up-to-date with the latest developments.
 
 ## 📁 Notable Files
 
