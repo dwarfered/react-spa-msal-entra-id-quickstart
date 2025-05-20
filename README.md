@@ -31,7 +31,7 @@ If you find this repository useful, please **give it a star**!
 | Language       | TypeScript                       |
 | Authentication | [MSAL React](https://github.com/AzureAD/microsoft-authentication-library-for-js) |
 | Identity       | Microsoft Entra ID               |
-| API            | Microsoft Graph API              |
+| API            | [Microsoft Graph API](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0)             |
 | UI Framework   | [Fluent UI](https://react.fluentui.dev/?path=/docs/concepts-introduction--docs) |
 | Auth Flow      | Authorization Code Flow with PKCE |
 | Data Retrieval | [SWR](https://swr.vercel.app)|
