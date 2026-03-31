@@ -1,6 +1,11 @@
 # React SPA with MSAL for Microsoft Entra ID Authentication
 
-This is now an archived Repo, please see  [https://github.com/dwarfered/nextjs-msal-react-graph-spa-template] for an updated code base.
+This repository is now archived.
+
+Please use the updated template:
+https://github.com/dwarfered/nextjs-msal-react-graph-spa-template
+
+---
 
 This quickstart demonstrates how to authenticate users in a React Single-Page Application (SPA) using the Microsoft Authentication Library (msal-react) with Microsoft Entra ID, and how to access data securely via the Microsoft Graph API.
 
